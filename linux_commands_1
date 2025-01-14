@@ -1,0 +1,131 @@
+# 1. Открыть терминал
+# (Открываем терминал через Ctrl+Alt+T)
+
+# 2. Получить текущее расположение
+pwd
+
+# 3. Вывести файлы в текущем расположении
+ls -la
+
+# 4. Перейти в домашнюю директорию
+cd ~
+
+# 5. Создать новую директорию "sandbox"
+mkdir sandbox
+
+# 6. Перейти в новую директорию
+cd sandbox
+
+# 7. Создать новый пустой файл
+touch file.txt
+
+# 8. Записать в файл какой-нибудь текст
+echo "Привет, мир!" > file.txt
+
+# 9. Отредактировать файл
+nano file.txt
+# (Внести изменения, сохранить через Ctrl+O и выйти через Ctrl+X)
+
+# 10. Вывести содержимое файла в консоль
+cat file.txt
+
+# 11. Сделать копию файла
+cp file.txt file_copy.txt
+
+# 12. Переименовать копию файла
+mv file_copy.txt renamed_file.txt
+
+# 13. Перейти на уровень выше
+cd ..
+
+# 14. Создать новую директорию "sandbox_new"
+mkdir sandbox_new
+
+# 15. Переместить файл в "sandbox_new"
+mv sandbox/file.txt sandbox_new/
+
+# 16. Скачать файл по ссылке
+cd sandbox
+wget https://shorturl.at/iuAJU
+
+# 17. Вывести только начало файла
+head application_1674570331837_972184.zip
+
+# 18. Вывести только конец файла
+tail application_1674570331837_972184.zip
+
+# 19. Найти ошибку в файле
+grep -i "error" application_1674570331837_972184.zip
+
+# 20. Посчитать количество слов в файле
+wc -w application_1674570331837_972184.zip
+
+# 21. Узнать размер файла
+du -h application_1674570331837_972184.zip
+
+# 22. Заархивировать файл
+zip application_logs.zip application_1674570331837_972184.zip
+
+# 23. Узнать размер архива
+du -h application_logs.zip
+
+# 24. Разархивировать файл
+unzip application_logs.zip
+
+# 25. Размер разделов/дисков в системе
+df -h
+
+# 26. Сохранить вывод размера дисков в файл
+df -h > disk_sizes.txt
+
+# 27. Создать новую директорию и git-репозиторий
+mkdir ~/git_repo
+cd ~/git_repo
+git init
+
+# 28. Переместить файл в директорию с git-репозиторием
+mv ~/sandbox_new/file.txt .
+
+# 29. Добавить файл в git и закоммитить
+git add file.txt
+git commit -m "Add file.txt"
+
+# 30. Проверить историю коммитов
+git log
+
+# 31. Создать новую ветку и перейти на неё
+git checkout -b new_branch
+
+# 32. Изменить файл и закоммитить
+nano file.txt
+# (Внести изменения, сохранить через Ctrl+O и выйти через Ctrl+X)
+git add file.txt
+git commit -m "Update file.txt in new_branch"
+
+# 33. Сделать merge ветки
+git checkout main
+git merge new_branch
+
+# 34. Показать полный список команд
+history
+
+# 35. Сохранить историю команд в файл
+history > commands_history.txt
+
+# 36. Проверить корзину после удаления
+gio trash --list
+
+# 37. Очистить корзину (если требуется)
+gio trash --empty
+
+# 38. Удалить директории и файлы ещё раз для проверки
+rm -rf ~/sandbox ~/sandbox_new ~/git_repo disk_sizes.txt application_1674570331837_972184.zip application_logs.zip
+
+# 39. Создать новую директорию
+mkdir ~/final_cleanup
+
+# 40. Переместить файл из "sandbox" в новую директорию (если ещё не удалён)
+mv ~/sandbox_new/file.txt ~/final_cleanup/
+
+# 41. Убедиться, что всё удалено (проверить вручную или командой)
+ls -la ~/sandbox ~/sandbox_new ~/git_repo ~/final_cleanup
